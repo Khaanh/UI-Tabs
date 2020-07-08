@@ -1,7 +1,14 @@
-$('.js-tabsSwitch').on('click', function(e) {
-  let id = $(this).attr('href')
-  $(this).closest('.tabs').siblings('.holder-content').find('.tabcontent').removeClass('is-opened')
-  $(this).addClass('is-active').siblings('.js-tabsSwitch').removeClass('is-active')
-  $('#' + id).addClass('is-opened')
+$('.js-toggleAcc').on('click', function(e) {
   e.preventDefault();
+  let $this = $(this);
+
+  if (!$this.hasClass('is-active')) {
+    $('.acc-body').slideUp(500);
+    $('.js-toggleAcc').removeClass('is-active');
+    $('.acc-icon').removeClass('is-rotated');
+  }
+
+  $this.toggleClass('is-active');
+  $this.next().slideToggle(300);
+  $('.acc-icon',this).toggleClass('is-rotated');
 })
