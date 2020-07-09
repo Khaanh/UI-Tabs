@@ -1,7 +1,29 @@
-$('.js-tabsSwitch').on('click', function(e) {
-  let id = $(this).attr('href')
-  $(this).closest('.tabs').siblings('.holder-content').find('.tabcontent').removeClass('is-opened')
-  $(this).addClass('is-active').siblings('.js-tabsSwitch').removeClass('is-active')
-  $('#' + id).addClass('is-opened')
+const scrollWidth = window.innerWidth - document.body.clientWidth + 'px';
+
+$('.js-modal-open').on('click', function(e) {
+  let targetMod = $(this).data('target'),
+      openMod = $(`.modal[data-open=${targetMod}]`);
+  
+  openMod.addClass('is-active');
+  $('body').css({
+    'padding-right': `${scrollWidth}`
+  }).addClass('modal-open');
   e.preventDefault();
 })
+
+$('.js-modal-close').on('click', function() {
+  $(this).closest('.modal').removeClass('is-active');
+  $('body').css({
+    'padding-right': ''
+  }).removeClass('modal-open');
+})
+
+$(document).mouseup(function (e){
+  let closeModal = $('.modal-content'); 
+  if (!closeModal.is(e.target) && closeModal.has(e.target).length === 0) { 
+    closeModal.closest('.modal').removeClass('is-active');
+    $('body').css({
+      'padding-right': ''
+    }).removeClass('modal-open');
+  }
+});
