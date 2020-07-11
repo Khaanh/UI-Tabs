@@ -7,40 +7,38 @@
 </head>
 <body>
 
-  <h2>Tabs block</h2>
-  <div class="tabs-section">
+  <h2>Pagination</h2>
+  <nav class='pagination-nav'>
+    <ul class="pagination-list">
+      <li class="pagination-item disabled">
+        <span class="pagination-link pagination-prev">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.092 0.944V0.104L7.232 3.436V4.08L0.092 7.412V6.572L6.098 3.758L0.092 0.944Z" fill="#2196F3"/>
+          </svg>
+        </span>
+      </li>
+      <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+      <li class="pagination-item current">
+        <span class="pagination-link">2</span>
+      </li>
+      <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+      <li class="pagination-item"><a class="pagination-link" href="#">4</a></li>
+      <li class="pagination-item"><a class="pagination-link" href="#">5</a></li>
+      <li class="pagination-item"><a class="pagination-link" href="#">6</a></li>
+      <li class="pagination-item"><a class="pagination-link" href="#">7</a></li>
+      <li class="pagination-item"><a class="pagination-link" href="#">8</a></li>
+      <li class="pagination-item"><a class="pagination-link" href="#">9</a></li>
+      <li class="pagination-item">
+        <a class="pagination-link pagination-next" href="#">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.092 0.944V0.104L7.232 3.436V4.08L0.092 7.412V6.572L6.098 3.758L0.092 0.944Z" fill="#2196F3"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <div class="tabs">
-      <a href="a1" class="tabslink js-tabsSwitch is-active">
-        <p>London</p>
-      </a>
-      <a href="a2" class="tabslink js-tabsSwitch">
-        <p>Paris</p>
-      </a>
-      <a href="a3" class="tabslink js-tabsSwitch">
-        <p>Barcelona</p>
-      </a>
-      <a href="a4" class="tabslink js-tabsSwitch">
-        <p>Madrid</p>
-      </a>
-    </div>
-
-    <div class="holder-content">
-      <div class="tabcontent is-opened" id="a1">
-        <p>London is the capital of Great Britain. It is one of the greatest cities in the world. It is an important business and financial centre. It is an intellectual centre, too. Everywhere in London, there are open spaces: Hyde Park and Regent Park are the largest. The City is the oldest part of London. </p>
-      </div>
-      <div class="tabcontent" id="a2">
-        <p>Paris is in the Paris department of the Paris-Isle-of-France region The French historic, political and economic capital, with a population of only 2.5 million is located in the northern part of France. One of the most beautiful cities in the world. Home to historical monuments such as Notre Dame, the Eiffel tower (320m), Bastille, Louvre and many more. </p>
-      </div>
-      <div class="tabcontent" id="a3">
-        <p>Barcelona has been an urban laboratory since the high Medieval Ages. A place of diversity, a backdrop for a multiplicity of social and cultural processes on multiple scales that reflect different ways of constructing the future, a city with a long experience of urban life and social innovations. </p>
-      </div>
-      <div class="tabcontent" id="a4">
-        <p>Madrid is in the middle of Spain, in the Community of Madrid. The Community is a large area that includes the city as well as small towns and villages outside the city. 7 million people live in the Community. More than 3 million live in the city itself. </p>
-      </div>
-    </div>
-
-  </div>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="main.js"></script>
 </body>

@@ -1,84 +1,76 @@
 h2 {
   text-align: center;
 }
-.tabs-section {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  min-width: 260px;
-  transition: 0.3s ease-in-out;
-}
-.tabs {
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 2px 2px 0px 0px;
-  height: 80px;
-}
+  // Pagination
+.pagination-nav {}
 
-.tabslink {
-  width: 25%; /*change depending on the number of tabs*/
-  height: 80px;
-  position: relative;
+.pagination-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+}
+
+.pagination-item {
+  height: 30px;
+  border: 1px solid blue;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 0 5px;
   overflow: hidden;
-  transition: 0.3s ease;
-  text-decoration: none;
-  &:hover {
-    p {
-      color: #8e44ad;
-      opacity: 1;
+  display: inline-block;
+  &.current {
+    .pagination-link {
+      background-color: blue;
+      color: #fff;
     }
   }
-  p {
-    opacity: 0.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s ease;
-    padding: 0;
-    margin: 0;
-    color: #000;
-  }
-  &.is-active {
-    background-color: #ccc;
+  &.disabled {
+    pointer-events: none;
   }
 }
 
-.holder-content {
-  z-index: -3;
-  position: relative;
-  opacity: 1;
-  padding: 40px 60px;
-  overflow: hidden;
-  transition: all 1s ease;
-  &:after {
-    content: "";
-    height: 5px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -2;
-    transition: all 1s ease;
+.pagination-link {
+  height: 100%;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  color: blue;
+  text-decoration: none;
+  background-color: transparent;
+  transition: 0.3s ease;
+  &:hover {
+    color: #fff;
+    background-color: blue;
+    > svg {
+      path {
+        fill: #fff;
+      }
+    }
   }
-  .tabcontent {
-    display: none;
-    min-height: 180px;
-    &.is-opened {
-      transition: all 1s ease;
-      display: block;
+}
+
+.pagination-prev,
+.pagination-next {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > svg {
+    path {
+      transition: 0.3s ease;
     }
-    p {
-      color: #000;
-      margin: 0;
-      padding: 0;
-      transition: all 1s ease;
-      width: 100%;
-    }
+  }
+}
+
+.pagination-prev {
+  svg {
+    transform: rotate(180deg);
   }
 }
